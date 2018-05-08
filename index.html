@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zakupowy pomocnik</title>
+        <meta name="keywords" content="sklep, lista, zakupy">
+        <meta name="description" cont="Prosta aplikacja mająca na celu pomóc w organizacji zakupów">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header--wrapper">
+            <p class="website--title">Zakupowy pomocnik</p>
+            <i class="fas fa-lg fa-shopping-cart"></i>
+        </header>
+        <main class="content--wrapper">
+            <form class="login--panel">
+                <p class="login--panel__description">Podaj login i haslo, zeby sie zalogowac</p>
+                <input class="credentials--input" type="text" name="username" id="username" placeholder="Login..." required>
+                <input class="credentials--input" type="password" name="password" id="password" placeholder="Haslo..." required>
+                <div class="btn-box">
+                    <input class="btn reset--btn" type="reset" value="Reset">
+                    <input class="btn login--btn" type="submit" value="Log in">
+                </div>
+            </form>
+            <div class="shopping--list--panel">
+                <p class="shopping--list--description">Moja lista zakupow</p>
+                <ul class="shopping--list">
+                    <li class="shopping--item">Item 1</li>
+                    <li class="shopping--item">Item 2</li>
+                    <li class="shopping--item">Item 3</li>
+                </ul>
+                <div class="newItem--box">
+                    <div class="plus--btn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </div>
+                    <input class="newItem" type="text" name="newItem" id="newItem" placeholder="Nowy produkt..." required>
+                </div>
+                <p class="error-message"></p>
+            </div>
+        </main>
+        <footer class="footer--wrapper">
+            <p class="copyright">Made by Damian Stachura &#9400 2018</p>
+        </footer>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
