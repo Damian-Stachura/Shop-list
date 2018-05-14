@@ -27,19 +27,20 @@
                     <input class="btn login--btn" type="submit" value="Log in">
                 </div>
             </form>
-            <div class="shopping--list--panel">
+            <form class="shopping--list--panel">
                 <p class="shopping--list--description">Moja lista zakupow</p>
                 <ul class="shopping--list">
-                    <li class="shopping--item">Item 1</li>
-                    <li class="shopping--item">Item 2</li>
-                    <li class="shopping--item">Item 3</li>
+                    <li class="shopping--item"><div class="x-btn"><i class="fas fa-2x fa-times"></i></div>Item 1</li>
+                    <li class="shopping--item"><div class="x-btn"><i class="fas fa-2x fa-times"></i></div>Item 2</li>
+                    <li class="shopping--item"><div class="x-btn"><i class="fas fa-2x fa-times"></i></div>Item 3</li>
                 </ul>
                 <div class="newItem--box">
-                    <div class="plus--btn"></div>
+                    <button type="submit" class="plus--btn"></button>
+                    <!--<input class="plus&#45;&#45;btn" type="submit" value="">-->
                     <input class="newItem" type="text" name="newItem" id="newItem" placeholder="Nowy produkt..." required>
                 </div>
                 <p class="error-message"></p>
-            </div>
+            </form>
         </main>
         <footer class="footer--wrapper">
             <p class="copyright">Made by Damian Stachura &#9400 2018</p>

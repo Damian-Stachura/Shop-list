@@ -32,10 +32,11 @@ $('.reset--btn').on('click', function () {
 /*SHOPPING PANEL FUNCTIONS*/
 
 //adding new item to the shop list
-var addNewShoppingItem = function() {
+var addNewShoppingItem = function(event) {
     //getting and setting values
     var newItemName = $('#newItem').val();
-    var newItem = $('<li class="shopping--item">' + newItemName + '</li>');
+    var newItem = $('<li class="shopping--item">' + '<div class="x-btn"><i class="fas fa-2x fa-times"></i></div>' + newItemName + '</li>');
+    event.preventDefault();
     //if empty -> error
     if($.trim(newItemName) == ""){
         $('.error-message').text("Nowy produkt nie moze byc pusty :(");
@@ -51,20 +52,24 @@ var addNewShoppingItem = function() {
         $('.error-message').text("");
     }
     // reset the newItem input value
-    $('#newItem').val("");
+    $('#newItem').val("").blur();
 }
 
 var plusBtn = $('.plus--btn');
-
 plusBtn.on('click', addNewShoppingItem);
-plusBtn.keypress(addNewShoppingItem);
-/*    plusBtn.on('keypress',function(event) {
-        if (event.keyCode === 13) {
-            addNewShoppingItem;
-        }
-    });*/
+
 
 //changing item's class onCLick
 $('.shopping--list').on('click', '.shopping--item', function() {
     $(this).toggleClass('active');
+    $(this).children('div').toggleClass('visible');
+})
+
+//removing 'shopping--item' on 'x-btn' click
+$('.shopping--list').on('click', '.x-btn', function () {
+    var $itemToRemove = $(this).parent();
+    $itemToRemove.animate({opacity: '0.0'},
+        700, function() {
+            $itemToRemove.remove();
+        })
 })

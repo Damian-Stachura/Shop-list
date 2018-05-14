@@ -129,15 +129,15 @@ body {
   #SHOPPING-LIST-PANEL
 \*------------------------------------*/
 .shopping--list--panel {
-    background: #F9ADA0;
+    display: none;
+    flex-direction: column;
     position: relative;
     left: 100%;
     border: 1px solid #fff;
     width: 80vw;
     max-width: 600px;
     padding: 10px 0;
-    display: none;
-    flex-direction: column;
+    background: #F9ADA0;
 }
 
 .shopping--list--description {
@@ -149,11 +149,26 @@ body {
 }
 
 .shopping--item {
+    position: relative;
     text-shadow: 1px 1px #000;
     padding: 15px 0 15px 20px;
     background: #F9627D;
     border-top: 1px solid #000;
     cursor: pointer;
+}
+
+.x-btn {
+    visibility: hidden;
+    text-shadow: 1px 1px 5px #000;
+    color: red;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    cursor: pointer;
+}
+
+.x-btn.visible {
+    visibility: visible;
 }
 
 .shopping--item.active {
@@ -177,11 +192,12 @@ body {
 }
 
 .plus--btn {
+    background: transparent;
     margin-top: 10px;
     align-self: center;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: 5px solid rgba(255, 255, 255, .3);
     border-radius: 40px;
 }
